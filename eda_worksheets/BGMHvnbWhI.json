@@ -1,0 +1,1539 @@
+{
+  "dataSpec": {
+    "dataset": {
+      "projectKey": "STUDENTPERFORMANCE",
+      "id": "student_mat_prepared"
+    },
+    "datasetSelection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false,
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": [
+            {
+              "input": "G3",
+              "operator": "!\u003d [number]",
+              "col": "sex",
+              "num": 0.0
+            }
+          ]
+        }
+      },
+      "partitionSelectionMethod": "ALL",
+      "latestPartitionsN": 1,
+      "ordering": {
+        "enabled": false,
+        "rules": []
+      },
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "maxRecords": 100000,
+      "targetRatio": 0.02,
+      "withinFirstN": -1,
+      "maxReadUncompressedBytes": -1
+    },
+    "autoRefreshSample": true
+  },
+  "rootCard": {
+    "type": "worksheet_root",
+    "confidenceLevel": 0.95,
+    "showConfidenceInterval": false,
+    "cards": [
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "xColumns": [
+          {
+            "name": "school",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "sex",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "age",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "traveltime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "studytime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "failures",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "famrel",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "freetime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "goout",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Dalc",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Walc",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "health",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "absences",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "G3",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "school",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "school",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ji6qqTi"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "school",
+                  "type": "CATEGORICAL"
+                },
+                "id": "YvXdYKJ"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "school",
+                  "type": "CATEGORICAL"
+                },
+                "id": "jQz110x"
+              }
+            ],
+            "id": "26tRv4K"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "sex",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "id": "O5USANe"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "id": "IIphKfb"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "id": "XRC9XTF"
+              }
+            ],
+            "id": "fPLAMyJ"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "age",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "dHJc2j8"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "O0S9UZ5"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "ihFF3Uo"
+              }
+            ],
+            "id": "aJ9p2W8"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "traveltime",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "traveltime",
+                  "type": "CONTINUOUS"
+                },
+                "id": "SnTaIT1"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "traveltime",
+                  "type": "CONTINUOUS"
+                },
+                "id": "tpSQdqE"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "traveltime",
+                  "type": "CONTINUOUS"
+                },
+                "id": "EVEjeha"
+              }
+            ],
+            "id": "e5UuIMB"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "studytime",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "studytime",
+                  "type": "CONTINUOUS"
+                },
+                "id": "Zz3vE1X"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "studytime",
+                  "type": "CONTINUOUS"
+                },
+                "id": "EAC3b9h"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "studytime",
+                  "type": "CONTINUOUS"
+                },
+                "id": "SZCn1AJ"
+              }
+            ],
+            "id": "T9aJkH6"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "failures",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "failures",
+                  "type": "CONTINUOUS"
+                },
+                "id": "OtSA8hN"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "failures",
+                  "type": "CONTINUOUS"
+                },
+                "id": "CVN7ilS"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "failures",
+                  "type": "CONTINUOUS"
+                },
+                "id": "MYuVjVB"
+              }
+            ],
+            "id": "NK9W5hC"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "famrel",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "famrel",
+                  "type": "CONTINUOUS"
+                },
+                "id": "mK5PHHp"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "famrel",
+                  "type": "CONTINUOUS"
+                },
+                "id": "pya25AK"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "famrel",
+                  "type": "CONTINUOUS"
+                },
+                "id": "F3Foi47"
+              }
+            ],
+            "id": "UlUDK38"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "freetime",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "freetime",
+                  "type": "CONTINUOUS"
+                },
+                "id": "Hxy7pL6"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "freetime",
+                  "type": "CONTINUOUS"
+                },
+                "id": "5vIxjWL"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "freetime",
+                  "type": "CONTINUOUS"
+                },
+                "id": "jVusc21"
+              }
+            ],
+            "id": "aPwiooW"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "goout",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "goout",
+                  "type": "CONTINUOUS"
+                },
+                "id": "JvFK4Qc"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "goout",
+                  "type": "CONTINUOUS"
+                },
+                "id": "bknWHfd"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "goout",
+                  "type": "CONTINUOUS"
+                },
+                "id": "rvbpRno"
+              }
+            ],
+            "id": "z9kJsQM"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Dalc",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "Dalc",
+                  "type": "CONTINUOUS"
+                },
+                "id": "1kpyFkm"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "Dalc",
+                  "type": "CONTINUOUS"
+                },
+                "id": "BFkbb6J"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "Dalc",
+                  "type": "CONTINUOUS"
+                },
+                "id": "fqed5Rt"
+              }
+            ],
+            "id": "5w3gHWQ"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Walc",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "Walc",
+                  "type": "CONTINUOUS"
+                },
+                "id": "4mmxviK"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "Walc",
+                  "type": "CONTINUOUS"
+                },
+                "id": "ct4wh28"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "Walc",
+                  "type": "CONTINUOUS"
+                },
+                "id": "4aCp8Fn"
+              }
+            ],
+            "id": "LFrdj5z"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "health",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "health",
+                  "type": "CONTINUOUS"
+                },
+                "id": "JfKFjQg"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "health",
+                  "type": "CONTINUOUS"
+                },
+                "id": "4cJL8SD"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "health",
+                  "type": "CONTINUOUS"
+                },
+                "id": "jbTkhNi"
+              }
+            ],
+            "id": "ipH3tYZ"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "absences",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "absences",
+                  "type": "CONTINUOUS"
+                },
+                "id": "BOdC4jc"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "absences",
+                  "type": "CONTINUOUS"
+                },
+                "id": "aEpqNZB"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "absences",
+                  "type": "CONTINUOUS"
+                },
+                "id": "Kz7dscc"
+              }
+            ],
+            "id": "GxMcF2a"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "G3",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 100,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "k6GYjb5"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showTotalCount": true,
+                "showMean": true,
+                "showSum": false,
+                "showMedian": true,
+                "showStd": true,
+                "showVariance": false,
+                "showSkewness": false,
+                "showKurtosis": false,
+                "showSem": false,
+                "showCompleteCount": true,
+                "showNbEmpty": true,
+                "showZeroCount": false,
+                "showZeroRatio": false,
+                "showNonZeroRatio": false,
+                "showIQR": false,
+                "showDistinctCount": true,
+                "showNbNonEmpty": false,
+                "showMixMax": true,
+                "showRange": false,
+                "showMode": true,
+                "column": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "UqNgvLF"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "Ztpuq3p"
+              }
+            ],
+            "id": "tSq9rzU"
+          }
+        ],
+        "id": "qzd0OJa"
+      },
+      {
+        "type": "bivariate_header",
+        "yColumn": {
+          "name": "G3",
+          "type": "CONTINUOUS"
+        },
+        "showMosaicPlot": true,
+        "showHistogram": true,
+        "showScatterPlot": true,
+        "showFrequencyTable": true,
+        "showBoxPlot": true,
+        "showSummary": true,
+        "xColumns": [
+          {
+            "name": "sex",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "age",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "absences",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "sex",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "bivariate_box_plot",
+                "maxValues": 5,
+                "groupOthers": true,
+                "binningMode": "AUTO",
+                "customBinningBoundaries": [],
+                "xColumn": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "NuZzqta"
+              },
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "RfppZiz"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "54ugeQ0"
+              },
+              {
+                "type": "bivariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showSpearman": true,
+                "showPearson": true,
+                "showTotalCount": true,
+                "showCovariance": true,
+                "showKendallTau": true,
+                "showMutualInformation": true,
+                "showCompleteCount": true,
+                "xColumn": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "RNYpZR6"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "009OJDI"
+              }
+            ],
+            "id": "zZWZO4g"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "age",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "scatter_plot",
+                "symbolSize": 4,
+                "xColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "kwpneAv"
+              },
+              {
+                "type": "bivariate_box_plot",
+                "maxValues": 5,
+                "groupOthers": true,
+                "binningMode": "AUTO",
+                "customBinningBoundaries": [],
+                "xColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "D1DceFm"
+              },
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "MnorM4i"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "xb8vs1r"
+              },
+              {
+                "type": "bivariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showSpearman": true,
+                "showPearson": true,
+                "showTotalCount": true,
+                "showCovariance": true,
+                "showKendallTau": true,
+                "showMutualInformation": true,
+                "showCompleteCount": true,
+                "xColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "58tIazf"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "afkhHdB"
+              }
+            ],
+            "id": "KxOdNsS"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "absences",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "scatter_plot",
+                "symbolSize": 4,
+                "xColumn": {
+                  "name": "absences",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "18oWHRj"
+              },
+              {
+                "type": "bivariate_box_plot",
+                "maxValues": 5,
+                "groupOthers": true,
+                "binningMode": "AUTO",
+                "customBinningBoundaries": [],
+                "xColumn": {
+                  "name": "absences",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "C2m8ZCu"
+              },
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "absences",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "mIe7Aux"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "absences",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "PYuELZ9"
+              },
+              {
+                "type": "bivariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showSpearman": true,
+                "showPearson": true,
+                "showTotalCount": true,
+                "showCovariance": true,
+                "showKendallTau": true,
+                "showMutualInformation": true,
+                "showCompleteCount": true,
+                "xColumn": {
+                  "name": "absences",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "6LlFfh3"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "absences",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "G3",
+                  "type": "CONTINUOUS"
+                },
+                "id": "a4oN1gq"
+              }
+            ],
+            "id": "fxABd9L"
+          }
+        ],
+        "id": "BejozPV"
+      },
+      {
+        "type": "shapiro",
+        "confidenceLevel": 0.95,
+        "column": {
+          "name": "G3",
+          "type": "CONTINUOUS"
+        },
+        "splitBy": {
+          "groupingColumn": "sex",
+          "maxGroupingValues": 5,
+          "groupWithOthers": true,
+          "groupWithAll": true
+        },
+        "id": "91LPiBM"
+      },
+      {
+        "type": "ttest_2samp",
+        "value1": [
+          "GP"
+        ],
+        "value2": [
+          "MS"
+        ],
+        "confidenceLevel": 0.95,
+        "xColumn": {
+          "name": "G3",
+          "type": "CONTINUOUS"
+        },
+        "yColumn": {
+          "name": "school",
+          "type": "CATEGORICAL"
+        },
+        "id": "Dd4Oybz"
+      },
+      {
+        "type": "oneway_anova",
+        "maxGroups": 10,
+        "confidenceLevel": 0.95,
+        "xColumn": {
+          "name": "G3",
+          "type": "CONTINUOUS"
+        },
+        "yColumn": {
+          "name": "age",
+          "type": "CONTINUOUS"
+        },
+        "id": "hhpR9aP"
+      },
+      {
+        "type": "chi2_independence_test",
+        "maxValuesX": 5,
+        "maxValuesY": 5,
+        "confidenceLevel": 0.95,
+        "xColumn": {
+          "name": "school",
+          "type": "CATEGORICAL"
+        },
+        "yColumn": {
+          "name": "sex",
+          "type": "CATEGORICAL"
+        },
+        "id": "iNILvk7"
+      },
+      {
+        "type": "correlation_matrix",
+        "heatmapParams": {
+          "showValues": true,
+          "showColors": true,
+          "showAbsValues": false,
+          "threshold": 0.0
+        },
+        "metric": "PEARSON",
+        "columns": [
+          {
+            "name": "age",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "studytime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "age_exp",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "id": "aLBoyie"
+      },
+      {
+        "type": "fit_distribution",
+        "distributions": [
+          {
+            "distribution": {
+              "type": "normal"
+            }
+          },
+          {
+            "distribution": {
+              "type": "beta"
+            }
+          }
+        ],
+        "confidenceLevel": 0.95,
+        "column": {
+          "name": "G3",
+          "type": "CONTINUOUS"
+        },
+        "id": "RUfeRnZ"
+      },
+      {
+        "type": "pca",
+        "heatmapParams": {
+          "showValues": true,
+          "showColors": true,
+          "showAbsValues": false,
+          "threshold": 0.0
+        },
+        "columns": [
+          {
+            "name": "age",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Medu",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Fedu",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "traveltime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "studytime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "failures",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "freetime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "goout",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "id": "e3Wsz1p"
+      }
+    ],
+    "id": "l2pSJSS"
+  },
+  "name": "Worksheet",
+  "versionTag": {
+    "versionNumber": 17,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1586194849726
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1585044211045
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

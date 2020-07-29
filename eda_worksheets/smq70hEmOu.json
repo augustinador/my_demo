@@ -1,0 +1,349 @@
+{
+  "dataSpec": {
+    "dataset": {
+      "projectKey": "STUDENTPERFORMANCE",
+      "id": "test"
+    },
+    "datasetSelection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
+      "latestPartitionsN": 1,
+      "ordering": {
+        "enabled": false,
+        "rules": []
+      },
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "maxRecords": 100000,
+      "targetRatio": 0.02,
+      "withinFirstN": -1,
+      "maxReadUncompressedBytes": -1
+    },
+    "autoRefreshSample": true
+  },
+  "rootCard": {
+    "type": "worksheet_root",
+    "confidenceLevel": 0.95,
+    "showConfidenceInterval": false,
+    "cards": [
+      {
+        "type": "pca",
+        "heatmapParams": {
+          "showValues": true,
+          "showColors": true,
+          "showAbsValues": false,
+          "threshold": 0.0
+        },
+        "columns": [
+          {
+            "name": "age",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "age_approx",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "G2",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "G2_approx",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "id": "7cKKJvB"
+      },
+      {
+        "type": "bivariate_header",
+        "yColumn": {
+          "name": "age",
+          "type": "CONTINUOUS"
+        },
+        "showMosaicPlot": true,
+        "showHistogram": true,
+        "showScatterPlot": true,
+        "showFrequencyTable": true,
+        "showBoxPlot": true,
+        "showSummary": true,
+        "xColumns": [
+          {
+            "name": "age_approx",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "G2",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "age_approx",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "scatter_plot",
+                "symbolSize": 4,
+                "xColumn": {
+                  "name": "age_approx",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "C8Bvgrw"
+              },
+              {
+                "type": "bivariate_box_plot",
+                "maxValues": 5,
+                "groupOthers": true,
+                "binningMode": "AUTO",
+                "customBinningBoundaries": [],
+                "xColumn": {
+                  "name": "age_approx",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "MmLNQgi"
+              },
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "age_approx",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "OTTeAIP"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "age_approx",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "xpNWNIY"
+              },
+              {
+                "type": "bivariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showSpearman": true,
+                "showPearson": true,
+                "showTotalCount": true,
+                "showCovariance": true,
+                "showKendallTau": true,
+                "showMutualInformation": true,
+                "showCompleteCount": true,
+                "xColumn": {
+                  "name": "age_approx",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "TmG1HjG"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "age_approx",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "8TEcRnJ"
+              }
+            ],
+            "id": "XFdcxKr"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "G2",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "scatter_plot",
+                "symbolSize": 4,
+                "xColumn": {
+                  "name": "G2",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "r9zT1HL"
+              },
+              {
+                "type": "bivariate_box_plot",
+                "maxValues": 5,
+                "groupOthers": true,
+                "binningMode": "AUTO",
+                "customBinningBoundaries": [],
+                "xColumn": {
+                  "name": "G2",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "h6puXkJ"
+              },
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "G2",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "48J2fUG"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "G2",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "FdW3X5x"
+              },
+              {
+                "type": "bivariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "showSpearman": true,
+                "showPearson": true,
+                "showTotalCount": true,
+                "showCovariance": true,
+                "showKendallTau": true,
+                "showMutualInformation": true,
+                "showCompleteCount": true,
+                "xColumn": {
+                  "name": "G2",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "wFBFTI0"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "G2",
+                  "type": "CONTINUOUS"
+                },
+                "yColumn": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "doNFxT7"
+              }
+            ],
+            "id": "ml8TfLu"
+          }
+        ],
+        "id": "0wYyCXl"
+      }
+    ],
+    "id": "YCsl0Jp"
+  },
+  "name": "Worksheet",
+  "versionTag": {
+    "versionNumber": 4,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1586192329355
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1586191376867
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
