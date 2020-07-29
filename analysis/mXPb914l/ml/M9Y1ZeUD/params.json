@@ -832,7 +832,7 @@
     "skipExpensiveReports": false,
     "random_forest_regression": {
       "n_estimators": {
-        "gridMode": "EXPLICIT",
+        "gridMode": "RANGE",
         "randomMode": "RANGE",
         "limit": {
           "min": 1
@@ -843,13 +843,13 @@
         "range": {
           "min": 80,
           "max": 200,
-          "nbValues": 3,
+          "nbValues": 4,
           "scaling": "LINEAR"
         }
       },
       "n_jobs": 1,
       "max_tree_depth": {
-        "gridMode": "EXPLICIT",
+        "gridMode": "RANGE",
         "randomMode": "RANGE",
         "limit": {
           "min": 1
@@ -866,7 +866,7 @@
         }
       },
       "min_samples_leaf": {
-        "gridMode": "EXPLICIT",
+        "gridMode": "RANGE",
         "randomMode": "RANGE",
         "limit": {
           "min": 1
