@@ -1,0 +1,15 @@
+using Dataiku
+import Dataiku: get_dataframe
+
+# Read recipe inputs
+student_mat_prepared_df = get_dataframe(dataset"student_mat_prepared")
+
+
+# Compute recipe outputs from inputs
+# TODO: Replace this part by your actual code that computes the output, as a Julia DataFrame
+
+test_julia_df = student_mat_prepared_df # For this sample code, simply copy input to output
+
+
+# Write recipe outputs
+Dataiku.write_with_schema(dataset"test_julia", test_julia_df)
