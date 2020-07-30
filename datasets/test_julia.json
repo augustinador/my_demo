@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1596123526946
+    "lastModifiedOn": 1596124068841
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,7 +85,144 @@
     }
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {
+        "name": "school",
+        "type": "string"
+      },
+      {
+        "name": "sex",
+        "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "bigint"
+      },
+      {
+        "name": "age_exp",
+        "type": "double"
+      },
+      {
+        "name": "address",
+        "type": "string"
+      },
+      {
+        "name": "famsize",
+        "type": "string"
+      },
+      {
+        "name": "Pstatus",
+        "type": "string"
+      },
+      {
+        "name": "Medu",
+        "type": "bigint"
+      },
+      {
+        "name": "Fedu",
+        "type": "bigint"
+      },
+      {
+        "name": "Mjob",
+        "type": "string"
+      },
+      {
+        "name": "Fjob",
+        "type": "string"
+      },
+      {
+        "name": "reason",
+        "type": "string"
+      },
+      {
+        "name": "guardian",
+        "type": "string"
+      },
+      {
+        "name": "traveltime",
+        "type": "bigint"
+      },
+      {
+        "name": "studytime",
+        "type": "bigint"
+      },
+      {
+        "name": "failures",
+        "type": "bigint"
+      },
+      {
+        "name": "schoolsup",
+        "type": "string"
+      },
+      {
+        "name": "famsup",
+        "type": "string"
+      },
+      {
+        "name": "paid",
+        "type": "string"
+      },
+      {
+        "name": "activities",
+        "type": "string"
+      },
+      {
+        "name": "nursery",
+        "type": "string"
+      },
+      {
+        "name": "higher",
+        "type": "string"
+      },
+      {
+        "name": "internet",
+        "type": "string"
+      },
+      {
+        "name": "romantic",
+        "type": "string"
+      },
+      {
+        "name": "famrel",
+        "type": "bigint"
+      },
+      {
+        "name": "freetime",
+        "type": "bigint"
+      },
+      {
+        "name": "goout",
+        "type": "bigint"
+      },
+      {
+        "name": "Dalc",
+        "type": "bigint"
+      },
+      {
+        "name": "Walc",
+        "type": "bigint"
+      },
+      {
+        "name": "health",
+        "type": "bigint"
+      },
+      {
+        "name": "absences",
+        "type": "bigint"
+      },
+      {
+        "name": "G1",
+        "type": "bigint"
+      },
+      {
+        "name": "G2",
+        "type": "bigint"
+      },
+      {
+        "name": "G3",
+        "type": "bigint"
+      }
+    ],
     "userModified": true
   },
   "metrics": {
