@@ -1,5 +1,13 @@
 {
-  "endpoints": [],
+  "name": "fge",
+  "endpoints": [
+    {
+      "testQueries": [],
+      "lookups": [],
+      "id": "test",
+      "type": "DATASETS_LOOKUP"
+    }
+  ],
   "publicAccess": true,
   "authRealm": {
     "queryKeys": []
