@@ -915,7 +915,7 @@
           "scaling": "LINEAR"
         }
       },
-      "enabled": true
+      "enabled": false
     },
     "random_forest_classification": {
       "n_estimators": {
@@ -1446,7 +1446,7 @@
           "scaling": "LOGARITHMIC"
         }
       },
-      "enabled": true
+      "enabled": false
     },
     "lasso_regression": {
       "alphaMode": "AUTO_CV",
@@ -1652,7 +1652,8 @@
           "min": 1
         },
         "values": [
-          10
+          10,
+          12
         ],
         "range": {
           "min": 8,
@@ -1680,7 +1681,7 @@
       "nesterovs_momentum": true,
       "shuffle": true,
       "learning_rate_init": 0.001,
-      "enabled": false
+      "enabled": true
     },
     "svc_classifier": {
       "C": {
