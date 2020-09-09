@@ -2391,7 +2391,7 @@
       "shuffleIterations": 1,
       "nFolds": 3,
       "stratified": true,
-      "strategy": "RANDOM",
+      "strategy": "BAYESIAN",
       "bayesianOptimizer": "SCIKIT_OPTIMIZE",
       "randomized": true,
       "seed": 0,
@@ -2422,7 +2422,8 @@
   "backendType": "PY_MEMORY",
   "maxConcurrentModelTraining": 2,
   "envSelection": {
-    "envMode": "USE_BUILTIN_MODE"
+    "envMode": "EXPLICIT_ENV",
+    "envName": "grid"
   },
   "containerSelection": {
     "containerMode": "INHERIT"
