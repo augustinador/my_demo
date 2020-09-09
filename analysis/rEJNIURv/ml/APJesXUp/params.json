@@ -2396,7 +2396,7 @@
       "randomized": true,
       "seed": 0,
       "nIter": 0,
-      "nIterRandom": 3,
+      "nIterRandom": 10,
       "timeout": 0,
       "nJobs": 4
     },
