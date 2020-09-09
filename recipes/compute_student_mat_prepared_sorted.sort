@@ -37,10 +37,15 @@
       }
     }
   },
-  "rank": false,
-  "denseRank": false,
-  "orders": [],
-  "rowNumber": false,
+  "rank": true,
+  "denseRank": true,
+  "orders": [
+    {
+      "column": "G1",
+      "desc": false
+    }
+  ],
+  "rowNumber": true,
   "outputColumnNameOverrides": {},
   "computedColumns": []
 }
