@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599644287138
+    "lastModifiedOn": 1599644301730
   },
   "creationTag": {
     "versionNumber": 0,
@@ -220,6 +220,18 @@
       },
       {
         "name": "G3",
+        "type": "bigint"
+      },
+      {
+        "name": "_row_number",
+        "type": "bigint"
+      },
+      {
+        "name": "_rank",
+        "type": "bigint"
+      },
+      {
+        "name": "_dense_rank",
         "type": "bigint"
       }
     ],
