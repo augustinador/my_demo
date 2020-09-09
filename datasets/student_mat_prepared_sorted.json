@@ -1,0 +1,309 @@
+{
+  "type": "Filesystem",
+  "managed": true,
+  "formatType": "csv",
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": true,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "formatParams": {
+    "style": "unix",
+    "charset": "utf8",
+    "separator": "\t",
+    "quoteChar": "\"",
+    "escapeChar": "\\",
+    "dateSerializationFormat": "ISO",
+    "arrayMapFormat": "json",
+    "hiveSeparators": [
+      "\u0002",
+      "\u0003",
+      "\u0004",
+      "\u0005",
+      "\u0006",
+      "\u0007",
+      "\b"
+    ],
+    "skipRowsBeforeHeader": 0,
+    "parseHeaderRow": false,
+    "skipRowsAfterHeader": 0,
+    "probableNumberOfRecords": 0,
+    "normalizeBooleans": false,
+    "normalizeDoubles": true,
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+    "readMissingColumnsBehavior": "DISCARD_SILENT",
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "fileReadFailureBehavior": "FAIL",
+    "compress": "gz"
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1599644287138
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1599644287006
+  },
+  "tags": [],
+  "params": {
+    "connection": "filesystem_managed",
+    "path": "${projectKey}/student_mat_prepared_sorted",
+    "notReadyIfEmpty": false,
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    }
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "school",
+        "type": "string"
+      },
+      {
+        "name": "sex",
+        "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "bigint"
+      },
+      {
+        "name": "age_exp",
+        "type": "double"
+      },
+      {
+        "name": "address",
+        "type": "string"
+      },
+      {
+        "name": "famsize",
+        "type": "string"
+      },
+      {
+        "name": "Pstatus",
+        "type": "string"
+      },
+      {
+        "name": "Medu",
+        "type": "bigint"
+      },
+      {
+        "name": "Fedu",
+        "type": "bigint"
+      },
+      {
+        "name": "Mjob",
+        "type": "string"
+      },
+      {
+        "name": "Fjob",
+        "type": "string"
+      },
+      {
+        "name": "reason",
+        "type": "string"
+      },
+      {
+        "name": "guardian",
+        "type": "string"
+      },
+      {
+        "name": "traveltime",
+        "type": "bigint"
+      },
+      {
+        "name": "studytime",
+        "type": "bigint"
+      },
+      {
+        "name": "failures",
+        "type": "bigint"
+      },
+      {
+        "name": "schoolsup",
+        "type": "boolean"
+      },
+      {
+        "name": "famsup",
+        "type": "boolean"
+      },
+      {
+        "name": "paid",
+        "type": "boolean"
+      },
+      {
+        "name": "activities",
+        "type": "boolean"
+      },
+      {
+        "name": "nursery",
+        "type": "boolean"
+      },
+      {
+        "name": "higher",
+        "type": "boolean"
+      },
+      {
+        "name": "internet",
+        "type": "boolean"
+      },
+      {
+        "name": "romantic",
+        "type": "boolean"
+      },
+      {
+        "name": "famrel",
+        "type": "bigint"
+      },
+      {
+        "name": "freetime",
+        "type": "bigint"
+      },
+      {
+        "name": "goout",
+        "type": "bigint"
+      },
+      {
+        "name": "Dalc",
+        "type": "bigint"
+      },
+      {
+        "name": "Walc",
+        "type": "bigint"
+      },
+      {
+        "name": "health",
+        "type": "bigint"
+      },
+      {
+        "name": "absences",
+        "type": "bigint"
+      },
+      {
+        "name": "G1",
+        "type": "bigint"
+      },
+      {
+        "name": "G2",
+        "type": "bigint"
+      },
+      {
+        "name": "G3",
+        "type": "bigint"
+      }
+    ],
+    "userModified": true
+  },
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "basic:COUNT_FILES",
+        "basic:SIZE",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {}
+}
