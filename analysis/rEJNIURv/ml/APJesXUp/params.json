@@ -850,7 +850,7 @@
     "skipExpensiveReports": false,
     "random_forest_regression": {
       "n_estimators": {
-        "gridMode": "EXPLICIT",
+        "gridMode": "RANGE",
         "randomMode": "RANGE",
         "limit": {
           "min": 1
