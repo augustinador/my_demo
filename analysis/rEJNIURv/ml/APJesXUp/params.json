@@ -868,7 +868,7 @@
       "n_jobs": 1,
       "max_tree_depth": {
         "gridMode": "EXPLICIT",
-        "randomMode": "RANGE",
+        "randomMode": "EXPLICIT",
         "limit": {
           "min": 1
         },
@@ -884,7 +884,7 @@
       },
       "min_samples_leaf": {
         "gridMode": "EXPLICIT",
-        "randomMode": "RANGE",
+        "randomMode": "EXPLICIT",
         "limit": {
           "min": 1
         },
