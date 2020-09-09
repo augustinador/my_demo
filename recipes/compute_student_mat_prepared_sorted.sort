@@ -37,8 +37,8 @@
       }
     }
   },
-  "rank": true,
-  "denseRank": true,
+  "rank": false,
+  "denseRank": false,
   "orders": [
     {
       "column": "G1",
