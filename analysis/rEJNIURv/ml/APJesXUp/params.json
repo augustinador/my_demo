@@ -932,7 +932,7 @@
           "scaling": "LINEAR"
         }
       },
-      "enabled": true
+      "enabled": false
     },
     "random_forest_classification": {
       "n_estimators": {
@@ -1331,7 +1331,7 @@
           }
         }
       },
-      "enabled": false
+      "enabled": true
     },
     "decision_tree_classification": {
       "max_depth": {
