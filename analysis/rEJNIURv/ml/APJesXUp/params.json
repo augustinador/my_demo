@@ -1267,7 +1267,7 @@
           "scaling": "LINEAR"
         }
       },
-      "selection_mode": "auto",
+      "selection_mode": "sqrt",
       "max_features": {
         "gridMode": "EXPLICIT",
         "randomMode": "RANGE",
