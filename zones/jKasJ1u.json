@@ -1,7 +1,20 @@
 {
   "name": "import",
   "color": "#31439C",
-  "items": [],
+  "items": [
+    {
+      "objectId": "student_mat",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "student_mat_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_student_mat_prepared",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
