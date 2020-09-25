@@ -121,7 +121,7 @@
       }
     }
   },
-  "name": "Student Performance",
+  "name": "Student Performance (tmp)",
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -177,11 +177,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1601039451482
+    "lastModifiedOn": 1601039460718
   },
   "creationTag": {
     "versionNumber": 0,
@@ -190,7 +190,7 @@
     },
     "lastModifiedOn": 1585043755973
   },
-  "shortDesc": "The project *Student Performance* was created by Administrator on Mar 24th 2020",
+  "shortDesc": "The project *Student Performance* was created by Administrator on Mar 24th 2020\nThe project *STUDENT_PERFORMANCE_TMP* was copied from *STUDENTPERFORMANCE* by Administrator on Sep 25th 2020",
   "tags": [
     "imported",
     "duplicated"
