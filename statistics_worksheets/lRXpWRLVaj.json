@@ -29,16 +29,321 @@
     "type": "worksheet_root",
     "confidenceLevel": 0.95,
     "showConfidenceInterval": false,
-    "cards": [],
+    "cards": [
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "xColumns": [
+          {
+            "name": "sex",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "age",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "age_exp",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "address",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "sex",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "id": "F6aLDk4"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ZZvdcAT"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "sex",
+                  "type": "CATEGORICAL"
+                },
+                "id": "7iEOxWH"
+              }
+            ],
+            "id": "hsfu7Ch"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "age",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "SDAPcKD"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "RLr1RyH"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "age",
+                  "type": "CONTINUOUS"
+                },
+                "id": "tJcjm0K"
+              }
+            ],
+            "id": "UeE6T3i"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "age_exp",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "age_exp",
+                  "type": "CONTINUOUS"
+                },
+                "id": "gZ23r2z"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "age_exp",
+                  "type": "CONTINUOUS"
+                },
+                "id": "zIXFr83"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "age_exp",
+                  "type": "CONTINUOUS"
+                },
+                "id": "f9qjSxY"
+              }
+            ],
+            "id": "vLkORD6"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "address",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "address",
+                  "type": "CATEGORICAL"
+                },
+                "id": "JQpY0EF"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "address",
+                  "type": "CATEGORICAL"
+                },
+                "id": "g6C3UGr"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "address",
+                  "type": "CATEGORICAL"
+                },
+                "id": "k9OaY6p"
+              }
+            ],
+            "id": "jiPV6v3"
+          }
+        ],
+        "id": "IjnlZHK"
+      },
+      {
+        "type": "ttest_2samp",
+        "value1": [
+          "F"
+        ],
+        "value2": [
+          "M"
+        ],
+        "confidenceLevel": 0.95,
+        "xColumn": {
+          "name": "G1",
+          "type": "CONTINUOUS"
+        },
+        "yColumn": {
+          "name": "sex",
+          "type": "CATEGORICAL"
+        },
+        "id": "QsYPfJF"
+      }
+    ],
     "id": "08zkN87"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1601017210649
+    "lastModifiedOn": 1601017289230
   },
   "creationTag": {
     "versionNumber": 0,
