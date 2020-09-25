@@ -29,27 +29,6 @@
     "type": "worksheet_root",
     "confidenceLevel": 0.95,
     "showConfidenceInterval": false,
-    "highlightFilter": {
-      "type": "and",
-      "filters": [
-        {
-          "type": "anum",
-          "column": "school",
-          "values": [
-            "GP"
-          ],
-          "name": "school: GP"
-        },
-        {
-          "type": "interval",
-          "column": "G1",
-          "closed": "LEFT",
-          "left": 10.0,
-          "right": 15.0,
-          "name": "G1: [10,15)"
-        }
-      ]
-    },
     "cards": [
       {
         "type": "bivariate_header",
@@ -123,27 +102,6 @@
               },
               {
                 "type": "bivariate_histogram",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -164,27 +122,6 @@
               },
               {
                 "type": "mosaic_plot",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -274,27 +211,6 @@
               },
               {
                 "type": "bivariate_histogram",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -315,27 +231,6 @@
               },
               {
                 "type": "mosaic_plot",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -410,27 +305,6 @@
               {
                 "type": "scatter_plot",
                 "symbolSize": 4,
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xColumn": {
                   "name": "age",
                   "type": "CONTINUOUS"
@@ -459,27 +333,6 @@
               },
               {
                 "type": "bivariate_histogram",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -500,27 +353,6 @@
               },
               {
                 "type": "mosaic_plot",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -595,27 +427,6 @@
               {
                 "type": "scatter_plot",
                 "symbolSize": 4,
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xColumn": {
                   "name": "age_exp",
                   "type": "CONTINUOUS"
@@ -644,27 +455,6 @@
               },
               {
                 "type": "bivariate_histogram",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -685,27 +475,6 @@
               },
               {
                 "type": "mosaic_plot",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -795,27 +564,6 @@
               },
               {
                 "type": "bivariate_histogram",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -836,27 +584,6 @@
               },
               {
                 "type": "mosaic_plot",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -946,27 +673,6 @@
               },
               {
                 "type": "bivariate_histogram",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -987,27 +693,6 @@
               },
               {
                 "type": "mosaic_plot",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -1097,27 +782,6 @@
               },
               {
                 "type": "bivariate_histogram",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -1138,27 +802,6 @@
               },
               {
                 "type": "mosaic_plot",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -1233,27 +876,6 @@
               {
                 "type": "scatter_plot",
                 "symbolSize": 4,
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xColumn": {
                   "name": "Medu",
                   "type": "CONTINUOUS"
@@ -1282,27 +904,6 @@
               },
               {
                 "type": "bivariate_histogram",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -1323,27 +924,6 @@
               },
               {
                 "type": "mosaic_plot",
-                "highlightFilter": {
-                  "type": "and",
-                  "filters": [
-                    {
-                      "type": "anum",
-                      "column": "school",
-                      "values": [
-                        "GP"
-                      ],
-                      "name": "school: GP"
-                    },
-                    {
-                      "type": "interval",
-                      "column": "G1",
-                      "closed": "LEFT",
-                      "left": 10.0,
-                      "right": 15.0,
-                      "name": "G1: [10,15)"
-                    }
-                  ]
-                },
                 "xBinningMode": "AUTO",
                 "yBinningMode": "AUTO",
                 "maxValuesX": 5,
@@ -1410,17 +990,117 @@
           }
         ],
         "id": "vBkALWn"
+      },
+      {
+        "type": "ttest_2samp",
+        "value1": [
+          "F"
+        ],
+        "value2": [
+          "M"
+        ],
+        "confidenceLevel": 0.95,
+        "xColumn": {
+          "name": "G1",
+          "type": "CONTINUOUS"
+        },
+        "yColumn": {
+          "name": "sex",
+          "type": "CATEGORICAL"
+        },
+        "id": "JbnpRsl"
+      },
+      {
+        "type": "correlation_matrix",
+        "heatmapParams": {
+          "showValues": true,
+          "showColors": true,
+          "showAbsValues": false,
+          "threshold": 0.0
+        },
+        "metric": "SPEARMAN",
+        "columns": [
+          {
+            "name": "age",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "age_exp",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Medu",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Fedu",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "traveltime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "studytime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "failures",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "famrel",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "freetime",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "goout",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Dalc",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Walc",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "health",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "absences",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "G1",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "G2",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "G3",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "id": "GG3GJzv"
       }
     ],
     "id": "P3oPLsT"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1601037637214
+    "lastModifiedOn": 1601037818160
   },
   "creationTag": {
     "versionNumber": 0,
