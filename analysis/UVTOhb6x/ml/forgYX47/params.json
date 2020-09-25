@@ -2393,7 +2393,7 @@
       "shuffleIterations": 1,
       "nFolds": 3,
       "stratified": true,
-      "strategy": "RANDOM",
+      "strategy": "BAYESIAN",
       "bayesianOptimizer": "SCIKIT_OPTIMIZE",
       "randomized": true,
       "seed": 0,
