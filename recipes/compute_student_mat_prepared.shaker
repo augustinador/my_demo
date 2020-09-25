@@ -20,7 +20,8 @@
       "maxStoredBytes": 104857600,
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL"
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
     },
     "autoRefreshSample": false
   },
@@ -36,7 +37,7 @@
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "exp(age)",
+        "expression": "exp(age) + 1",
         "column": "age_exp"
       },
       "alwaysShowComment": false
@@ -49,6 +50,7 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
+  "columnWidthsByName": {},
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
