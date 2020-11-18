@@ -1,11 +1,12 @@
 {
-  "inputDatasetSmartName": "student_mat_prepared",
+  "inputDatasetSmartName": "student_matt",
   "script": {
     "steps": [],
     "maxProcessedMemTableBytes": -1,
     "columnsSelection": {
       "mode": "ALL"
     },
+    "columnWidthsByName": {},
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
@@ -16,6 +17,7 @@
     "explorationSampling": {
       "selection": {
         "maxStoredBytes": 104857600,
+        "timeout": -1,
         "filter": {
           "distinct": false,
           "enabled": false
@@ -47,11 +49,11 @@
   "charts": [],
   "name": "Quick modeling of G3 on student_mat_prepared",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585048477097
+    "lastModifiedOn": 1605696576724
   },
   "creationTag": {
     "versionNumber": 0,

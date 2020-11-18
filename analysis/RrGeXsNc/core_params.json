@@ -1,5 +1,5 @@
 {
-  "inputDatasetSmartName": "student_mat_prepared",
+  "inputDatasetSmartName": "student_matt",
   "script": {
     "steps": [],
     "maxProcessedMemTableBytes": -1,
@@ -49,11 +49,11 @@
   "charts": [],
   "name": "Performance modeling of G1 on student_mat_prepared",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1596041195241
+    "lastModifiedOn": 1605696576724
   },
   "creationTag": {
     "versionNumber": 0,
