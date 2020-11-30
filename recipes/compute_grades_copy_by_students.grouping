@@ -111,7 +111,7 @@
           },
           {
             "name": "weighted",
-            "type": "double"
+            "type": "float"
           },
           {
             "name": "count",
