@@ -57,7 +57,7 @@
       "first": false
     },
     {
-      "customExpr": "cast(SUM(grades*coeff) / sum(coeff) as decimal(8, 2))",
+      "customExpr": "cast(SUM(grades*coeff) / sum(coeff))",
       "firstLastNotNull": false,
       "customName": "weighted",
       "type": "FLOAT"
