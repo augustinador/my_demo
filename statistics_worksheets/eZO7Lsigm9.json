@@ -38,6 +38,17 @@
           "name": "age",
           "type": "CONTINUOUS"
         },
+        "splitBy": {
+          "groupingColumn": {
+            "name": "school",
+            "type": "CATEGORICAL"
+          },
+          "binningMode": "AUTO",
+          "maxValues": 5,
+          "groupWithOthers": true,
+          "customBinningBoundaries": [],
+          "groupWithAll": true
+        },
         "id": "zcuQUQY"
       }
     ],
@@ -45,11 +56,11 @@
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1606738822782
+    "lastModifiedOn": 1606746418385
   },
   "creationTag": {
     "versionNumber": 0,
