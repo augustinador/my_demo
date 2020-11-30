@@ -5,7 +5,18 @@
   },
   "keys": [
     {
-      "column": "students"
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "last": false,
+      "max": false,
+      "column": "students",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
@@ -15,8 +26,10 @@
       "firstLastNotNull": false,
       "column": "grades",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "int",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -31,8 +44,10 @@
       "firstLastNotNull": false,
       "column": "coeff",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "int",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -40,6 +55,12 @@
       "avg": false,
       "stddev": false,
       "first": false
+    },
+    {
+      "customExpr": "SUM(grades)",
+      "firstLastNotNull": false,
+      "customName": "custom_aggr_1",
+      "type": "DOUBLE"
     }
   ],
   "globalCount": true,
@@ -78,8 +99,28 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "students",
+            "type": "string"
+          },
+          {
+            "name": "custom_aggr_1",
+            "type": "double"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
