@@ -1,3 +1,42 @@
 {
-  "data": []
+  "data": [
+    [
+      "first",
+      "10",
+      "1"
+    ],
+    [
+      "first",
+      "12",
+      "10"
+    ],
+    [
+      "second",
+      "5",
+      "1"
+    ],
+    [
+      "second",
+      "7",
+      "10"
+    ],
+    [
+      "second",
+      "19",
+      "50"
+    ],
+    [
+      null,
+      null,
+      null
+    ]
+  ],
+  "schema": {
+    "columns": [
+      {"name":"students","type":"string"},
+      {"name":"grades","type":"int"},
+      {"name":"coeff","type":"int"}
+    ],
+    "userModified": false
+  }
 }
