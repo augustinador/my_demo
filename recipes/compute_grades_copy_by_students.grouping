@@ -59,8 +59,8 @@
     {
       "customExpr": "cast(SUM(grades*coeff) / sum(coeff) as decimal(8, 2))",
       "firstLastNotNull": false,
-      "customName": "custom_aggr_1",
-      "type": "DOUBLE"
+      "customName": "weighted",
+      "type": "FLOAT"
     }
   ],
   "globalCount": true,
@@ -110,7 +110,7 @@
             "type": "string"
           },
           {
-            "name": "custom_aggr_1",
+            "name": "weighted",
             "type": "double"
           },
           {
