@@ -57,7 +57,7 @@
       "first": false
     },
     {
-      "customExpr": "SUM(grades) / sum(coeff)",
+      "customExpr": "SUM(grades) ",
       "firstLastNotNull": false,
       "customName": "custom_aggr_1",
       "type": "DOUBLE"
