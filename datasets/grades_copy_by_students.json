@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1606732511445
+    "lastModifiedOn": 1606732964519
   },
   "creationTag": {
     "versionNumber": 0,
@@ -63,8 +63,8 @@
         "type": "string"
       },
       {
-        "name": "custom_aggr_1",
-        "type": "double"
+        "name": "weighted",
+        "type": "float"
       },
       {
         "name": "count",
