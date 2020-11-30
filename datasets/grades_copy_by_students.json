@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1606732436691
+    "lastModifiedOn": 1606732511445
   },
   "creationTag": {
     "versionNumber": 0,
@@ -61,6 +61,10 @@
       {
         "name": "students",
         "type": "string"
+      },
+      {
+        "name": "custom_aggr_1",
+        "type": "double"
       },
       {
         "name": "count",
