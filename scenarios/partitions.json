@@ -5,11 +5,11 @@
   "name": "partitions",
   "active": false,
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1606748100971
+    "lastModifiedOn": 1606748139086
   },
   "checklists": {
     "checklists": []
@@ -42,6 +42,32 @@
           "envSelection": {
             "envMode": "INHERIT"
           },
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_d_grades_copy_by_students",
+        "type": "build_flowitem",
+        "name": "Step #2",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "grades_copy_by_students",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
           "proceedOnFailure": false
         }
       }
