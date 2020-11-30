@@ -5,7 +5,19 @@
       "useMemTable": false,
       "filter": {
         "distinct": false,
-        "enabled": false
+        "enabled": true,
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": [
+            {
+              "input": "school",
+              "operator": "contains",
+              "col": "sex",
+              "string": "GP",
+              "num": 0.0
+            }
+          ]
+        }
       },
       "partitionSelectionMethod": "ALL",
       "latestPartitionsN": 1,
@@ -20,7 +32,7 @@
       "maxReadUncompressedBytes": -1
     },
     "autoRefreshSample": true,
-    "refreshTrigger": 0,
+    "refreshTrigger": 1,
     "containerSelection": {
       "containerMode": "INHERIT"
     }
@@ -1008,6 +1020,17 @@
           "name": "sex",
           "type": "CATEGORICAL"
         },
+        "splitBy": {
+          "groupingColumn": {
+            "name": "school",
+            "type": "CATEGORICAL"
+          },
+          "binningMode": "AUTO",
+          "maxValues": 5,
+          "groupWithOthers": true,
+          "customBinningBoundaries": [],
+          "groupWithAll": true
+        },
         "id": "JbnpRsl"
       },
       {
@@ -1096,11 +1119,11 @@
   },
   "name": "my_work",
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 10,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1606736744621
+    "lastModifiedOn": 1606746371573
   },
   "creationTag": {
     "versionNumber": 0,
