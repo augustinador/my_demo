@@ -1,7 +1,55 @@
 [
   {
     "execSQLLike": false,
-    "localDatasets": [],
+    "localDatasets": [
+      {
+        "datasets": [
+          "grades"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "grades_copy"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "grades_copy_by_students"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "student_mat"
+        ],
+        "privileges": [
+          "READ_DATA",
+          "READ_METADATA",
+          "READ_SCHEMA",
+          "WRITE_METADATA"
+        ]
+      },
+      {
+        "datasets": [
+          "student_mat_prepared_sorted"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "student_matt"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "test_julia"
+        ],
+        "privileges": []
+      }
+    ],
     "projectPrivileges": {
       "admin": false,
       "readProjectContent": false,
