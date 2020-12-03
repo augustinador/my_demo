@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "onBehalf": "JF67bAQ",
+    "id": "0rfMy8FhxSxuLCoV",
+    "key": "7pYr7Apuf3xVNWnrPlW2Cydy74rVw0Wt",
+    "label": "Key for Web app my_webapp(JF67bAQ)",
+    "createdOn": 1607001222570
+  }
+]
