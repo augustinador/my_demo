@@ -40,11 +40,11 @@
   "name": "my_webapp",
   "apiKey": "7pYr7Apuf3xVNWnrPlW2Cydy74rVw0Wt",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607001222846
+    "lastModifiedOn": 1607001255755
   },
   "creationTag": {
     "versionNumber": 0,
