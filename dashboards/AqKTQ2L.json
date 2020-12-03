@@ -30,8 +30,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
+              "top": 3,
+              "left": 0,
               "width": 10,
               "height": 5
             },
@@ -54,11 +54,11 @@
   "name": "Student Performance\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607009973311
+    "lastModifiedOn": 1607009982038
   },
   "creationTag": {
     "versionNumber": 0,
