@@ -1,0 +1,75 @@
+{
+  "type": "eda",
+  "params": {
+    "card": {
+      "type": "ttest_ztest_1samp",
+      "hypothesizedMean": 10.0,
+      "confidenceLevel": 0.95,
+      "column": {
+        "name": "age",
+        "type": "CONTINUOUS"
+      },
+      "splitBy": {
+        "groupingColumn": {
+          "name": "school",
+          "type": "CATEGORICAL"
+        },
+        "binningMode": "AUTO",
+        "maxValues": 5,
+        "groupWithOthers": true,
+        "customBinningBoundaries": [],
+        "groupWithAll": true
+      },
+      "id": "zcuQUQY"
+    },
+    "dataSpec": {
+      "inputDatasetSmartName": "student_matt",
+      "datasetSelection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 100000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": true,
+      "refreshTrigger": 0,
+      "containerSelection": {
+        "containerMode": "INHERIT"
+      }
+    }
+  },
+  "owner": "admin",
+  "listed": true,
+  "name": "Student 𝘵-test on age ",
+  "dashboardCreationId": "AqKTQ2L",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1607009970570
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1607009970570
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
