@@ -101,5 +101,28 @@
     "key": "P42NsKUTbBO6HWBL67eeDol7Ijya4sAz",
     "label": "Key for Web app labeling(h7oIXzQ)",
     "createdOn": 1607001376006
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "onBehalf": "vAyXqC3",
+    "id": "UPaMT57oSh6xP4pY",
+    "key": "LoDOvqedEWsotmyYN0u114iHlFZQAF8s",
+    "label": "Key for Web app test(vAyXqC3)",
+    "createdOn": 1607010269194
   }
 ]
