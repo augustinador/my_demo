@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1610378660132
+    "lastModifiedOn": 1610378689207
   },
   "creationTag": {
     "versionNumber": 0,
@@ -91,19 +91,19 @@
         "type": "string"
       },
       {
-        "name": "A_value_count",
+        "name": "A_value_first",
         "type": "bigint"
       },
       {
-        "name": "B_value_count",
+        "name": "B_value_first",
         "type": "bigint"
       },
       {
-        "name": "C_value_count",
+        "name": "C_value_first",
         "type": "bigint"
       }
     ],
-    "userModified": false,
+    "userModified": true,
     "metadata": {
       "engineType": "DSS",
       "pivotElementsModalities": [
