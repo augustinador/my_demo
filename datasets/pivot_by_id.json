@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1610378600056
+    "lastModifiedOn": 1610378660132
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,99 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": false
+    "columns": [
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "A_value_count",
+        "type": "bigint"
+      },
+      {
+        "name": "B_value_count",
+        "type": "bigint"
+      },
+      {
+        "name": "C_value_count",
+        "type": "bigint"
+      }
+    ],
+    "userModified": false,
+    "metadata": {
+      "engineType": "DSS",
+      "pivotElementsModalities": [
+        {
+          "pivotElement": {
+            "keyColumns": [
+              "type"
+            ],
+            "valueLimit": "TOP_N",
+            "topnLimit": 20,
+            "minOccLimit": 0,
+            "explicitValues": [],
+            "globalCount": false,
+            "valueColumns": [
+              {
+                "column": "value",
+                "type": "bigint",
+                "min": false,
+                "max": false,
+                "count": true,
+                "countDistinct": false,
+                "sum": false,
+                "concat": false,
+                "stddev": false,
+                "avg": false,
+                "sum2": false,
+                "first": false,
+                "last": false,
+                "concatDistinct": false,
+                "firstLastNotNull": false
+              }
+            ]
+          },
+          "pivotedModalities": [
+            {
+              "keyValues": [
+                "A"
+              ],
+              "name": "A",
+              "valueColumns": [
+                {
+                  "source": "value",
+                  "pivoted": "A_value"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "B"
+              ],
+              "name": "B",
+              "valueColumns": [
+                {
+                  "source": "value",
+                  "pivoted": "B_value"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "C"
+              ],
+              "name": "C",
+              "valueColumns": [
+                {
+                  "source": "value",
+                  "pivoted": "C_value"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   "metrics": {
     "probes": [
