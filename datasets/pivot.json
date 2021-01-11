@@ -36,11 +36,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1610378321655
+    "lastModifiedOn": 1610378390036
   },
   "creationTag": {
     "versionNumber": 0,
@@ -57,7 +57,20 @@
     "importProjectKey": "STUDENTPERFORMANCE"
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "type": "bigint"
+      }
+    ],
     "userModified": true
   },
   "metrics": {
