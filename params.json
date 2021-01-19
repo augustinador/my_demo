@@ -131,7 +131,7 @@
       }
     }
   },
-  "name": "Student Performance",
+  "name": "Student Performance (my_branch)",
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -187,11 +187,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 13,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607009970227
+    "lastModifiedOn": 1611096981315
   },
   "creationTag": {
     "versionNumber": 0,
@@ -200,9 +200,10 @@
     },
     "lastModifiedOn": 1585043755973
   },
-  "shortDesc": "The project *Student Performance* was created by Administrator on Mar 24th 2020",
+  "shortDesc": "The project *Student Performance* was created by Administrator on Mar 24th 2020\nThe project *STUDENT_PERFORMANCE_MY_BRANCH* was copied from *STUDENTPERFORMANCE* by Administrator on Jan 19th 2021",
   "tags": [
-    "imported"
+    "imported",
+    "duplicated"
   ],
   "customFields": {},
   "checklists": {
