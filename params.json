@@ -18,6 +18,27 @@
   },
   "projectType": "REGULAR",
   "projectAppType": "REGULAR",
+  "bundleExporterSettings": {
+    "exportOptions": {
+      "exportUploads": false,
+      "exportManagedFS": false,
+      "exportAnalysisModels": false,
+      "exportSavedModels": false,
+      "exportManagedFolders": false,
+      "exportModelEvaluationStores": false,
+      "exportAllInputDatasets": false,
+      "exportAllDatasets": false,
+      "exportAllInputManagedFolders": false,
+      "exportGitRepository": false,
+      "exportInsightsData": false,
+      "useManualPluginsInfo": false,
+      "includedDatasetsData": [],
+      "includedSavedModels": [],
+      "includedModelEvaluationStores": [],
+      "includedManagedFolders": [],
+      "shareAllInputDatasets": false
+    }
+  },
   "owner": "admin",
   "permissions": [],
   "additionalDashboardUsers": {
@@ -187,11 +208,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 14,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1611097130234
+    "lastModifiedOn": 1616605202887
   },
   "creationTag": {
     "versionNumber": 0,
