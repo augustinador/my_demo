@@ -37,7 +37,7 @@
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "exp(age)",
+        "expression": "exp(age) + 1",
         "column": "age_exp"
       },
       "alwaysShowComment": false
