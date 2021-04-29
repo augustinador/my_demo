@@ -18,8 +18,8 @@
         "sparkUseGlobalMetastore": false, 
         "sparkExecutionEngine": "SPARK_SUBMIT", 
         "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK", 
-        "pipelineAllowMerge": true, 
         "pipelineAllowStart": true, 
+        "pipelineAllowMerge": true, 
         "sparkConf": {
             "inheritConf": "default", 
             "conf": []
@@ -105,107 +105,111 @@
         "target_remapping": [], 
         "per_feature": {
             "famsize": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "schoolsup": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Boolean", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Boolean"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "sex": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Gender", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Gender"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "nursery": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Boolean", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Boolean"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "Medu": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
@@ -217,8 +221,8 @@
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "TARGET", 
                 "binarize_constant_threshold": 0.0, 
@@ -228,589 +232,602 @@
             }, 
             "G2": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "REJECT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "Dalc": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "studytime": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "Pstatus": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Boolean", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Boolean"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "Fedu": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
-                "type": "NUMERIC", 
-                "impute_constant_value": 0.0
-            }, 
-            "goout": {
-                "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
+                "binarize_constant_threshold": 0.0, 
                 "missing_handling": "IMPUTE", 
-                "customHandlingCode": "", 
-                "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
-                "binarize_threshold_mode": "MEDIAN", 
-                "state": {
-                    "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
-                }, 
-                "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
-                "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
-                "type": "NUMERIC", 
-                "impute_constant_value": 0.0
-            }, 
-            "health": {
-                "generate_derivative": false, 
-                "sendToInput": "main", 
                 "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
-                "customHandlingCode": "", 
-                "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
-                "binarize_threshold_mode": "MEDIAN", 
-                "state": {
-                    "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
-                }, 
-                "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
-                "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
-            "internet": {
-                "missing_impute_with": "MODE", 
+            "Fjob": {
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Boolean", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
+                "missing_impute_with": "MODE", 
+                "type": "CATEGORY", 
+                "dummy_drop": "AUTO", 
+                "category_handling": "DUMMIFY"
+            }, 
+            "health": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
+                }, 
+                "role": "INPUT", 
+                "quantile_bin_nb_bins": 4, 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "internet": {
                 "min_samples": 10, 
+                "hash_whole_categories": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "cumulative_proportion": 0.95, 
+                "sendToInput": "main", 
+                "state": {
+                    "userModified": false, 
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Boolean"
+                }, 
+                "missing_handling": "NONE", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "role": "INPUT", 
+                "max_cat_safety": 200, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "famsup": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Boolean", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Boolean"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "higher": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Boolean", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Boolean"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "activities": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Boolean", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Boolean"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "famrel": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "guardian": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "paid": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Boolean", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Boolean"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "reason": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "freetime": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "address": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "absences": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
-                "type": "NUMERIC", 
-                "impute_constant_value": 0.0
-            }, 
-            "age": {
-                "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
+                "binarize_constant_threshold": 0.0, 
                 "missing_handling": "IMPUTE", 
-                "customHandlingCode": "", 
-                "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
-                "binarize_threshold_mode": "MEDIAN", 
-                "state": {
-                    "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
-                }, 
-                "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
-                "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "school": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "CountryMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "CountryMeaning"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "romantic": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Boolean", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Boolean"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "Walc": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "age_sq": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "DoubleMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "DoubleMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
-            "Fjob": {
-                "missing_impute_with": "MODE", 
+            "traveltime": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
-                "missing_handling": "NONE", 
-                "max_nb_categories": 100, 
-                "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
-                "max_cat_safety": 200, 
-                "min_samples": 10, 
-                "type": "CATEGORY", 
-                "dummy_drop": "AUTO", 
-                "category_handling": "DUMMIFY"
+                "quantile_bin_nb_bins": 4, 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "goout": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
+                }, 
+                "role": "INPUT", 
+                "quantile_bin_nb_bins": 4, 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
             }, 
             "Mjob": {
-                "missing_impute_with": "MODE", 
+                "min_samples": 10, 
+                "hash_whole_categories": false, 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
                 "cumulative_proportion": 0.95, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "dummy_drop": "AUTO", 
                 "category_handling": "DUMMIFY"
             }, 
             "failures": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "G1": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "REJECT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
-            "traveltime": {
+            "age": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }
@@ -843,6 +860,7 @@
             "beta_1": 0.9, 
             "beta_2": 0.999, 
             "shuffle": true, 
+            "momentum": 0.8, 
             "nesterovs_momentum": true, 
             "solver": "adam", 
             "validation_fraction": 0.1, 
@@ -852,13 +870,12 @@
             "batch_size": 200, 
             "power_t": 0.5, 
             "seed": 1337, 
-            "activation": "relu", 
             "early_stopping": false, 
             "tol": 0.0001, 
             "epsilon": 1e-08, 
             "alpha": 0.001, 
-            "momentum": 0.8, 
             "auto_batch": true, 
+            "activation": "relu", 
             "learning_rate_init": 0.001, 
             "layer_sizes": {
                 "randomMode": "RANGE", 
@@ -869,14 +886,14 @@
                     "nbValues": 3, 
                     "min": 8
                 }, 
-                "values": [
-                    10
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    10
+                ], 
                 "type": "INTEGER"
             }
         }, 
@@ -890,16 +907,16 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "nValues": 0, 
                 "values": [
                     0.1, 
                     1.0, 
                     10.0
                 ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
                 "type": "FLOAT"
             }, 
             "alphaMode": "AUTO_CV", 
@@ -915,16 +932,16 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "nValues": 0, 
                 "values": [
                     0.1, 
                     1.0, 
                     3.0
                 ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
                 "type": "FLOAT"
             }, 
             "alphaMode": "MANUAL", 
@@ -942,6 +959,7 @@
         }, 
         "logistic_regression": {
             "penalty": {
+                "type": "CATEGORY", 
                 "values": {
                     "l2": {
                         "enabled": true, 
@@ -951,8 +969,7 @@
                         "enabled": false, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "multi_class": "ovr", 
             "C": {
@@ -964,6 +981,11 @@
                     "nbValues": 3, 
                     "min": 0.01
                 }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "nValues": 0, 
                 "values": [
                     0.01, 
                     0.1, 
@@ -971,11 +993,6 @@
                     10.0, 
                     100.0
                 ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
                 "type": "FLOAT"
             }, 
             "n_jobs": 2, 
@@ -992,14 +1009,14 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
-                "values": [
-                    1.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    1.0
+                ], 
                 "type": "FLOAT"
             }
         }, 
@@ -1013,6 +1030,7 @@
         }, 
         "gbt_classification": {
             "loss": {
+                "type": "CATEGORY", 
                 "values": {
                     "exponential": {
                         "enabled": false, 
@@ -1022,8 +1040,7 @@
                         "enabled": true, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "max_feature_prop": {
                 "gridMode": "EXPLICIT", 
@@ -1042,6 +1059,25 @@
                     "min": 0.1
                 }
             }, 
+            "max_depth": {
+                "randomMode": "RANGE", 
+                "scaling": "EXPLICIT", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 8, 
+                    "nbValues": 3, 
+                    "min": 3
+                }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "nValues": 0, 
+                "values": [
+                    3
+                ], 
+                "type": "INTEGER"
+            }, 
             "learning_rate": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -1051,14 +1087,14 @@
                     "nbValues": 3, 
                     "min": 0.05
                 }, 
-                "values": [
-                    0.1
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.1
+                ], 
                 "type": "FLOAT"
             }, 
             "enabled": false, 
@@ -1071,14 +1107,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
-                "values": [
-                    3
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    3
+                ], 
                 "type": "INTEGER"
             }, 
             "n_estimators": {
@@ -1090,17 +1126,16 @@
                     "nbValues": 3, 
                     "min": 80
                 }, 
-                "values": [
-                    100
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    100
+                ], 
                 "type": "INTEGER"
             }, 
-            "selection_mode": "auto", 
             "max_features": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -1110,39 +1145,22 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "nValues": 0, 
                 "values": [
                     0
                 ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
                 "type": "INTEGER"
             }, 
-            "max_depth": {
-                "randomMode": "RANGE", 
-                "scaling": "EXPLICIT", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 8, 
-                    "nbValues": 3, 
-                    "min": 3
-                }, 
-                "values": [
-                    3
-                ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "type": "INTEGER"
-            }
+            "selection_mode": "auto"
         }, 
         "plugin_python": {}, 
         "gbt_regression": {
             "loss": {
+                "type": "CATEGORY", 
                 "values": {
                     "lad": {
                         "enabled": false, 
@@ -1156,8 +1174,7 @@
                         "enabled": true, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "max_feature_prop": {
                 "gridMode": "EXPLICIT", 
@@ -1176,6 +1193,25 @@
                     "min": 0.1
                 }
             }, 
+            "max_depth": {
+                "randomMode": "RANGE", 
+                "scaling": "EXPLICIT", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 8, 
+                    "nbValues": 3, 
+                    "min": 3
+                }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "nValues": 0, 
+                "values": [
+                    3
+                ], 
+                "type": "INTEGER"
+            }, 
             "learning_rate": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -1185,14 +1221,14 @@
                     "nbValues": 3, 
                     "min": 0.05
                 }, 
-                "values": [
-                    0.1
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.1
+                ], 
                 "type": "FLOAT"
             }, 
             "enabled": false, 
@@ -1205,14 +1241,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
-                "values": [
-                    3
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    3
+                ], 
                 "type": "INTEGER"
             }, 
             "n_estimators": {
@@ -1224,17 +1260,16 @@
                     "nbValues": 3, 
                     "min": 80
                 }, 
-                "values": [
-                    100
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    100
+                ], 
                 "type": "INTEGER"
             }, 
-            "selection_mode": "auto", 
             "max_features": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -1244,35 +1279,17 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "nValues": 0, 
                 "values": [
                     0
                 ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
                 "type": "INTEGER"
             }, 
-            "max_depth": {
-                "randomMode": "RANGE", 
-                "scaling": "EXPLICIT", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 8, 
-                    "nbValues": 3, 
-                    "min": 3
-                }, 
-                "values": [
-                    3
-                ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "type": "INTEGER"
-            }
+            "selection_mode": "auto"
         }, 
         "nb_sparkling": {
             "enabled": false, 
@@ -1288,17 +1305,18 @@
             ], 
             "batchSize": 32, 
             "stepsPerEpoch": 100, 
+            "gpuAllowGrowth": false, 
+            "epochs": 10, 
             "kerasInputs": [
                 "main"
             ], 
-            "epochs": 10, 
-            "gpuAllowGrowth": false, 
             "advancedFitMode": false, 
             "shuffleData": true, 
             "enabled": false
         }, 
         "decision_tree_classification": {
             "splitter": {
+                "type": "CATEGORY", 
                 "values": {
                     "random": {
                         "enabled": false, 
@@ -1308,10 +1326,10 @@
                         "enabled": true, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "criterion": {
+                "type": "CATEGORY", 
                 "values": {
                     "gini": {
                         "enabled": true, 
@@ -1321,8 +1339,7 @@
                         "enabled": false, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "max_depth": {
                 "randomMode": "RANGE", 
@@ -1333,14 +1350,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
-                "values": [
-                    5
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    5
+                ], 
                 "type": "INTEGER"
             }, 
             "enabled": false, 
@@ -1353,14 +1370,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
-                "values": [
-                    1
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    1
+                ], 
                 "type": "INTEGER"
             }
         }, 
@@ -1376,15 +1393,15 @@
                     "nbValues": 3, 
                     "min": 5
                 }, 
-                "values": [
-                    6, 
-                    15
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    6, 
+                    15
+                ], 
                 "type": "INTEGER"
             }, 
             "selection_mode": "auto", 
@@ -1398,14 +1415,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
-                "values": [
-                    1
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    1
+                ], 
                 "type": "INTEGER"
             }, 
             "n_estimators": {
@@ -1417,14 +1434,14 @@
                     "nbValues": 3, 
                     "min": 80
                 }, 
-                "values": [
-                    100
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    100
+                ], 
                 "type": "INTEGER"
             }, 
             "max_feature_prop": {
@@ -1453,14 +1470,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
-                "values": [
-                    5
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    5
+                ], 
                 "type": "INTEGER"
             }
         }, 
@@ -1474,73 +1491,31 @@
             "max_w2": -1.0, 
             "use_adaptative": true, 
             "activation": "RECTIFIER", 
+            "l1": 0.0, 
             "enabled": false, 
-            "epsilon": 1e-08, 
             "epochs": 10.0, 
             "momentum_ramp": 1000000.0, 
             "rate": 0.005, 
             "input_dropout_ratio": 0.0, 
             "l2": 0.0, 
             "rho": 0.99, 
-            "l1": 0.0, 
+            "epsilon": 1e-08, 
             "hidden": [
                 10, 
                 10
             ], 
-            "momentum_stable": 0.0, 
+            "rate_decay": 1.0, 
             "dropout": false, 
-            "rate_decay": 1.0
+            "momentum_stable": 0.0
         }, 
         "mllib_gbt": {
             "cache_node_ids": false, 
             "subset_strategy": "auto", 
             "subsampling_rate": 1.0, 
+            "max_memory_mb": 256, 
             "impurity": "gini", 
             "max_bins": 32, 
             "enabled": false, 
-            "step_size": {
-                "randomMode": "RANGE", 
-                "scaling": "EXPLICIT", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 0.5, 
-                    "nbValues": 3, 
-                    "min": 0.05
-                }, 
-                "values": [
-                    0.1
-                ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": 1, 
-                    "min": 1e-23
-                }, 
-                "type": "FLOAT"
-            }, 
-            "checkpoint_interval": 10, 
-            "min_instance_per_node": 1, 
-            "min_info_gain": 0.0, 
-            "max_memory_mb": 256, 
-            "num_trees": {
-                "randomMode": "RANGE", 
-                "scaling": "EXPLICIT", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 50, 
-                    "nbValues": 3, 
-                    "min": 10
-                }, 
-                "values": [
-                    20
-                ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "type": "INTEGER"
-            }, 
-            "seed": 1337, 
             "max_depth": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -1550,26 +1525,73 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
-                "values": [
-                    5
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    5
+                ], 
                 "type": "INTEGER"
-            }
+            }, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "step_size": {
+                "randomMode": "RANGE", 
+                "scaling": "EXPLICIT", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 0.5, 
+                    "nbValues": 3, 
+                    "min": 0.05
+                }, 
+                "limit": {
+                    "max": 1, 
+                    "min": 1e-23
+                }, 
+                "nValues": 0, 
+                "values": [
+                    0.1
+                ], 
+                "type": "FLOAT"
+            }, 
+            "num_trees": {
+                "randomMode": "RANGE", 
+                "scaling": "EXPLICIT", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 50, 
+                    "nbValues": 3, 
+                    "min": 10
+                }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "nValues": 0, 
+                "values": [
+                    20
+                ], 
+                "type": "INTEGER"
+            }, 
+            "seed": 1337, 
+            "checkpoint_interval": 10
         }, 
-        "max_ensemble_nodes_serialized": 6000, 
+        "vertica_logistic_regression": {
+            "epsilon": 1e-06, 
+            "maxIterations": 200, 
+            "enabled": false, 
+            "optimizer": "BFGS"
+        }, 
         "gbm_sparkling": {
             "learn_rate": 0.1, 
             "ntrees": 50, 
             "family": "AUTO", 
             "nbins": 20, 
-            "enabled": false, 
-            "tweedie_power": 1.5, 
             "min_rows": 10, 
+            "tweedie_power": 1.5, 
+            "enabled": false, 
             "nbins_cats": 1024, 
             "balance_classes": false, 
             "max_after_balance_size": 2.0, 
@@ -1600,14 +1622,14 @@
                     "nbValues": 3, 
                     "min": 5
                 }, 
-                "values": [
-                    8
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    8
+                ], 
                 "type": "INTEGER"
             }, 
             "selection_mode": "auto", 
@@ -1621,14 +1643,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
-                "values": [
-                    3
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    3
+                ], 
                 "type": "INTEGER"
             }, 
             "n_estimators": {
@@ -1640,14 +1662,14 @@
                     "nbValues": 3, 
                     "min": 10
                 }, 
-                "values": [
-                    30
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    30
+                ], 
                 "type": "INTEGER"
             }, 
             "max_feature_prop": {
@@ -1676,14 +1698,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
-                "values": [
-                    5
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    5
+                ], 
                 "type": "INTEGER"
             }
         }, 
@@ -1693,26 +1715,27 @@
             "liftPoint": 0.4, 
             "customEvaluationMetricGIB": true, 
             "costMatrixWeights": {
-                "fnGain": 0.0, 
                 "tpGain": 1.0, 
+                "fnGain": 0.0, 
                 "tnGain": 0.0, 
                 "fpGain": -0.3
             }
         }, 
         "gridSearchParams": {
             "nIter": 0, 
-            "nJobs": 4, 
+            "splitRatio": 0.8, 
             "strategy": "GRID", 
             "randomized": true, 
             "shuffleIterations": 1, 
             "mode": "KFOLD", 
             "timeout": 0, 
-            "splitRatio": 0.8, 
+            "nJobs": 4, 
             "nFolds": 3, 
             "stratified": true
         }, 
         "svm_regression": {
             "kernel": {
+                "type": "CATEGORY", 
                 "values": {
                     "rbf": {
                         "enabled": true, 
@@ -1730,8 +1753,7 @@
                         "enabled": false, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "C": {
                 "randomMode": "RANGE", 
@@ -1742,14 +1764,14 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
-                "values": [
-                    1.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    1.0
+                ], 
                 "type": "FLOAT"
             }, 
             "max_iter": -1, 
@@ -1791,10 +1813,6 @@
             "cache_node_ids": false, 
             "max_bins": 32, 
             "enabled": false, 
-            "checkpoint_interval": 10, 
-            "min_instance_per_node": 1, 
-            "min_info_gain": 0.0, 
-            "max_memory_mb": 256, 
             "max_depth": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -1804,16 +1822,20 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
-                "values": [
-                    5
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    5
+                ], 
                 "type": "INTEGER"
-            }
+            }, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "max_memory_mb": 256, 
+            "checkpoint_interval": 10
         }, 
         "leastsquare_regression": {
             "n_jobs": 2, 
@@ -1831,14 +1853,14 @@
                     "nbValues": 3, 
                     "min": 0.001
                 }, 
-                "values": [
-                    0.1
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.1
+                ], 
                 "type": "FLOAT"
             }, 
             "enet_param": {
@@ -1850,14 +1872,14 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
-                "values": [
-                    0.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.0
+                ], 
                 "type": "FLOAT"
             }
         }, 
@@ -1873,14 +1895,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
-                "values": [
-                    5
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    5
+                ], 
                 "type": "INTEGER"
             }, 
             "enabled": false, 
@@ -1899,14 +1921,14 @@
                     "nbValues": 3, 
                     "min": 0.001
                 }, 
-                "values": [
-                    0.1
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.1
+                ], 
                 "type": "FLOAT"
             }, 
             "enet_param": {
@@ -1918,19 +1940,20 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
-                "values": [
-                    0.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.0
+                ], 
                 "type": "FLOAT"
             }
         }, 
         "svc_classifier": {
             "kernel": {
+                "type": "CATEGORY", 
                 "values": {
                     "rbf": {
                         "enabled": true, 
@@ -1948,8 +1971,7 @@
                         "enabled": false, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "C": {
                 "randomMode": "RANGE", 
@@ -1960,14 +1982,14 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
-                "values": [
-                    1.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    1.0
+                ], 
                 "type": "FLOAT"
             }, 
             "max_iter": -1, 
@@ -2010,7 +2032,25 @@
             "seed": 1337, 
             "early_stopping_rounds": 4, 
             "enable_cuda": false, 
-            "missing": 0.0, 
+            "colsample_bylevel": {
+                "randomMode": "RANGE", 
+                "scaling": "EXPLICIT", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 1.0, 
+                    "nbValues": 3, 
+                    "min": 0.5
+                }, 
+                "limit": {
+                    "max": 1.0, 
+                    "min": 1e-23
+                }, 
+                "nValues": 0, 
+                "values": [
+                    1.0
+                ], 
+                "type": "FLOAT"
+            }, 
             "nthread": 4, 
             "min_child_weight": {
                 "randomMode": "RANGE", 
@@ -2021,17 +2061,18 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
-                "values": [
-                    0.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.0
+                ], 
                 "type": "FLOAT"
             }, 
             "objective": {
+                "type": "CATEGORY", 
                 "values": {
                     "reg_logistic": {
                         "enabled": false, 
@@ -2045,37 +2086,36 @@
                         "enabled": false, 
                         "weight": 1.0
                     }, 
-                    "multi_softprob": {
-                        "enabled": false, 
-                        "weight": 1.0
-                    }, 
                     "binary_logistic": {
                         "enabled": false, 
                         "weight": 1.0
+                    }, 
+                    "multi_softprob": {
+                        "enabled": false, 
+                        "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
-            "impute_missing": false, 
-            "colsample_bylevel": {
+            "max_depth": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
                 "range": {
                     "scaling": "LINEAR", 
-                    "max": 1.0, 
+                    "max": 5, 
                     "nbValues": 3, 
-                    "min": 0.5
+                    "min": 2
                 }, 
-                "values": [
-                    1.0
-                ], 
-                "nValues": 0, 
                 "limit": {
-                    "max": 1.0, 
-                    "min": 1e-23
+                    "max": null, 
+                    "min": 1
                 }, 
-                "type": "FLOAT"
+                "nValues": 0, 
+                "values": [
+                    3
+                ], 
+                "type": "INTEGER"
             }, 
+            "missing": 0.0, 
             "scale_pos_weight": 1.0, 
             "learning_rate": {
                 "randomMode": "RANGE", 
@@ -2086,14 +2126,14 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
-                "values": [
-                    0.2
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.2
+                ], 
                 "type": "FLOAT"
             }, 
             "max_delta_step": {
@@ -2105,14 +2145,14 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
-                "values": [
-                    0.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.0
+                ], 
                 "type": "FLOAT"
             }, 
             "base_score": 0.5, 
@@ -2126,17 +2166,18 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
-                "values": [
-                    0.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 0.0
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.0
+                ], 
                 "type": "FLOAT"
             }, 
             "booster": {
+                "type": "CATEGORY", 
                 "values": {
                     "gbtree": {
                         "enabled": true, 
@@ -2146,10 +2187,8 @@
                         "enabled": false, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
-            "enable_early_stopping": true, 
             "colsample_bytree": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -2159,36 +2198,18 @@
                     "nbValues": 3, 
                     "min": 0.5
                 }, 
-                "values": [
-                    1.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    1.0
+                ], 
                 "type": "FLOAT"
             }, 
             "enabled": false, 
-            "max_depth": {
-                "randomMode": "RANGE", 
-                "scaling": "EXPLICIT", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 5, 
-                    "nbValues": 3, 
-                    "min": 2
-                }, 
-                "values": [
-                    3
-                ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "type": "INTEGER"
-            }, 
+            "impute_missing": false, 
             "subsample": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -2198,36 +2219,17 @@
                     "nbValues": 3, 
                     "min": 0.5
                 }, 
-                "values": [
-                    1.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    1.0
+                ], 
                 "type": "FLOAT"
             }, 
             "gpu_tree_method": "gpu_exact", 
-            "gamma": {
-                "randomMode": "RANGE", 
-                "scaling": "EXPLICIT", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 1.0, 
-                    "nbValues": 3, 
-                    "min": 0.0
-                }, 
-                "values": [
-                    0.0
-                ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 0.0
-                }, 
-                "type": "FLOAT"
-            }, 
             "lambda": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -2237,19 +2239,40 @@
                     "nbValues": 3, 
                     "min": 0.5
                 }, 
-                "values": [
-                    1.0
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    1.0
+                ], 
                 "type": "FLOAT"
-            }
+            }, 
+            "gamma": {
+                "randomMode": "RANGE", 
+                "scaling": "EXPLICIT", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 1.0, 
+                    "nbValues": 3, 
+                    "min": 0.0
+                }, 
+                "limit": {
+                    "max": null, 
+                    "min": 0.0
+                }, 
+                "nValues": 0, 
+                "values": [
+                    0.0
+                ], 
+                "type": "FLOAT"
+            }, 
+            "enable_early_stopping": true
         }, 
         "sgd_regression": {
             "loss": {
+                "type": "CATEGORY", 
                 "values": {
                     "huber": {
                         "enabled": false, 
@@ -2259,14 +2282,14 @@
                         "enabled": true, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "n_jobs": 2, 
             "l1_ratio": 0.15, 
             "max_iter": 1000, 
             "enabled": false, 
             "penalty": {
+                "type": "CATEGORY", 
                 "values": {
                     "elasticnet": {
                         "enabled": false, 
@@ -2280,8 +2303,7 @@
                         "enabled": true, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "tol": 0.001, 
             "epsilon": {
@@ -2293,14 +2315,14 @@
                     "nbValues": 3, 
                     "min": 0.01
                 }, 
-                "values": [
-                    0.01
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1e-23
                 }, 
+                "nValues": 0, 
+                "values": [
+                    0.01
+                ], 
                 "type": "FLOAT"
             }, 
             "alpha": {
@@ -2312,28 +2334,24 @@
                     "nbValues": 3, 
                     "min": 1e-05
                 }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "nValues": 0, 
                 "values": [
                     0.001, 
                     0.0001, 
                     1e-05
                 ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
                 "type": "FLOAT"
             }
         }, 
         "custom_mllib": [], 
-        "vertica_logistic_regression": {
-            "epsilon": 1e-06, 
-            "maxIterations": 200, 
-            "enabled": false, 
-            "optimizer": "BFGS"
-        }, 
+        "max_ensemble_nodes_serialized": 6000, 
         "decision_tree_regression": {
             "splitter": {
+                "type": "CATEGORY", 
                 "values": {
                     "random": {
                         "enabled": false, 
@@ -2343,10 +2361,10 @@
                         "enabled": true, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "criterion": {
+                "type": "CATEGORY", 
                 "values": {
                     "gini": {
                         "enabled": true, 
@@ -2356,8 +2374,7 @@
                         "enabled": false, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "max_depth": {
                 "randomMode": "RANGE", 
@@ -2368,14 +2385,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
-                "values": [
-                    5
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    5
+                ], 
                 "type": "INTEGER"
             }, 
             "enabled": false, 
@@ -2388,19 +2405,20 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
-                "values": [
-                    1
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    1
+                ], 
                 "type": "INTEGER"
             }
         }, 
         "sgd_classifier": {
             "loss": {
+                "type": "CATEGORY", 
                 "values": {
                     "modified_huber": {
                         "enabled": false, 
@@ -2410,14 +2428,14 @@
                         "enabled": true, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "n_jobs": 2, 
             "l1_ratio": 0.15, 
             "max_iter": 1000, 
             "enabled": false, 
             "penalty": {
+                "type": "CATEGORY", 
                 "values": {
                     "elasticnet": {
                         "enabled": false, 
@@ -2431,8 +2449,7 @@
                         "enabled": true, 
                         "weight": 1.0
                     }
-                }, 
-                "type": "CATEGORY"
+                }
             }, 
             "tol": 0.001, 
             "alpha": {
@@ -2444,16 +2461,16 @@
                     "nbValues": 3, 
                     "min": 1e-05
                 }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "nValues": 0, 
                 "values": [
                     0.001, 
                     0.0001, 
                     1e-05
                 ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
                 "type": "FLOAT"
             }
         }, 
@@ -2461,52 +2478,10 @@
             "cache_node_ids": false, 
             "subset_strategy": "auto", 
             "subsampling_rate": 1.0, 
+            "max_memory_mb": 256, 
             "impurity": "gini", 
             "max_bins": 32, 
             "enabled": false, 
-            "step_size": {
-                "randomMode": "RANGE", 
-                "scaling": "EXPLICIT", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 0.5, 
-                    "nbValues": 3, 
-                    "min": 0.05
-                }, 
-                "values": [
-                    0.1
-                ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": 1, 
-                    "min": 1e-23
-                }, 
-                "type": "FLOAT"
-            }, 
-            "checkpoint_interval": 10, 
-            "min_instance_per_node": 1, 
-            "min_info_gain": 0.0, 
-            "max_memory_mb": 256, 
-            "num_trees": {
-                "randomMode": "RANGE", 
-                "scaling": "EXPLICIT", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 50, 
-                    "nbValues": 3, 
-                    "min": 10
-                }, 
-                "values": [
-                    20
-                ], 
-                "nValues": 0, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "type": "INTEGER"
-            }, 
-            "seed": 1337, 
             "max_depth": {
                 "randomMode": "RANGE", 
                 "scaling": "EXPLICIT", 
@@ -2516,16 +2491,58 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
-                "values": [
-                    5
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    5
+                ], 
                 "type": "INTEGER"
-            }
+            }, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "step_size": {
+                "randomMode": "RANGE", 
+                "scaling": "EXPLICIT", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 0.5, 
+                    "nbValues": 3, 
+                    "min": 0.05
+                }, 
+                "limit": {
+                    "max": 1, 
+                    "min": 1e-23
+                }, 
+                "nValues": 0, 
+                "values": [
+                    0.1
+                ], 
+                "type": "FLOAT"
+            }, 
+            "num_trees": {
+                "randomMode": "RANGE", 
+                "scaling": "EXPLICIT", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 50, 
+                    "nbValues": 3, 
+                    "min": 10
+                }, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "nValues": 0, 
+                "values": [
+                    20
+                ], 
+                "type": "INTEGER"
+            }, 
+            "seed": 1337, 
+            "checkpoint_interval": 10
         }, 
         "random_forest_classification": {
             "n_jobs": 4, 
@@ -2538,14 +2555,14 @@
                     "nbValues": 3, 
                     "min": 5
                 }, 
-                "values": [
-                    8
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    8
+                ], 
                 "type": "INTEGER"
             }, 
             "selection_mode": "auto", 
@@ -2559,14 +2576,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
-                "values": [
-                    3
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    3
+                ], 
                 "type": "INTEGER"
             }, 
             "n_estimators": {
@@ -2578,14 +2595,14 @@
                     "nbValues": 3, 
                     "min": 80
                 }, 
-                "values": [
-                    100
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    100
+                ], 
                 "type": "INTEGER"
             }, 
             "max_feature_prop": {
@@ -2614,14 +2631,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
-                "values": [
-                    5
-                ], 
-                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
                 }, 
+                "nValues": 0, 
+                "values": [
+                    5
+                ], 
                 "type": "INTEGER"
             }
         }
@@ -2669,6 +2686,7 @@
         "ascending": true
     }, 
     "partitionedModel": {
+        "enabled": false, 
         "ssdSelection": {
             "targetRatio": 0.02, 
             "maxReadUncompressedBytes": -1, 
@@ -2686,7 +2704,6 @@
             "partitionSelectionMethod": "ALL", 
             "useMemTable": false, 
             "samplingMethod": "FULL"
-        }, 
-        "enabled": false
+        }
     }
 }
