@@ -208,11 +208,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 16,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1616605202887
+    "lastModifiedOn": 1619699447210
   },
   "creationTag": {
     "versionNumber": 0,
@@ -223,7 +223,8 @@
   },
   "shortDesc": "The project *Student Performance* was created by Administrator on Mar 24th 2020",
   "tags": [
-    "imported"
+    "imported",
+    "duplicated"
   ],
   "customFields": {},
   "checklists": {
