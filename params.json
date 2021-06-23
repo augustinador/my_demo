@@ -152,7 +152,7 @@
       }
     }
   },
-  "name": "Student Performance (my-branch)",
+  "name": "Student Performance (my_new_branch)",
   "imgPattern": 6,
   "metrics": {
     "probes": [],
@@ -209,11 +209,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 23,
+    "versionNumber": 26,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1624444074337
+    "lastModifiedOn": 1624452630666
   },
   "creationTag": {
     "versionNumber": 0,
@@ -222,7 +222,7 @@
     },
     "lastModifiedOn": 1585043755973
   },
-  "shortDesc": "The project *Student Performance* was created by Administrator on Mar 24th 2020\nThe project *STUDENT_PERFORMANCE_NEW_FEAT* was copied from *STUDENTPERFORMANCE* by Administrator on Apr 29th 2021\nThe project *STUDENT_PERFORMANCE_MY_BRANCH* was copied from *STUDENTPERFORMANCE* by Administrator on Jun 23rd 2021",
+  "shortDesc": "The project *Student Performance* was created by Administrator on Mar 24th 2020\nThe project *STUDENT_PERFORMANCE_NEW_FEAT* was copied from *STUDENTPERFORMANCE* by Administrator on Apr 29th 2021\nThe project *STUDENT_PERFORMANCE_MY_NEW_BRANCH_2* was copied from *STUDENTPERFORMANCE* by Administrator on Jun 23rd 2021",
   "tags": [
     "imported",
     "duplicated"

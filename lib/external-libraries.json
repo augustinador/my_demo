@@ -1,7 +1,15 @@
 {
-  "gitReferences": {},
+  "gitReferences": {
+    "deep": {
+      "remote": "https://github.com/deepmind/acme.git",
+      "checkout": "refs/heads/master",
+      "remotePath": "",
+      "lastHash": "684c9189794a57f8f1c0e7ee7169be4bd0a67583"
+    }
+  },
   "pythonPath": [
-    "python"
+    "python",
+    "deep"
   ],
   "rsrcPath": [
     "R"
